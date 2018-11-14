@@ -1,19 +1,16 @@
 #include "bingo.h"
 
 #define N 5
+#define M 3
 
-void initiate_bingo()
+void initiate_bingo(int bingo[N][N])
 {	
 	
-	int bingo[N][N];
-	int my_bingo[N][N]; //내 빙고 배열 
-	int com_bingo[N][N]; //컴퓨터의 빙고 배열 
 	int i,j;
 	int jungbok[N*N]; //중복을 받아줄 배열 
 	int nansu; //난수를 받아줄 변수 
 	
-	srand((unsigned)time(NULL));
-	
+
 	for(i=0; i<N; i++) //빙고판초기화 
 	{
 		for(j=0; j<N; j++)
@@ -23,7 +20,9 @@ void initiate_bingo()
 	}
 	
 	for(i=0; i<N*N; i++) //jungbok을 0으로 초기화 
+	{
 		jungbok[i]=0;
+	}	
 		
 		
 		
@@ -33,10 +32,9 @@ void initiate_bingo()
 			{
 				while (1)
 				{
-					jungbok[N*N]=0;
 					nansu= rand()%(N*N)+1;
 					
-					if (jungbok[nansu-1]==0)
+					if (jungbok[nansu-1] == 0)
 					{
 						bingo[i][j] = nansu;
 						jungbok[nansu-1] = 1;
@@ -45,11 +43,11 @@ void initiate_bingo()
 				}
 			}
 	
-	}	return ;
+	}	return bingo[N][N];
 }
 		
 
-void print_bingo(int bingo[N][N])
+void print_bingo(int bingo_p[N][N])
 {
 	
 	int i,j;
@@ -58,11 +56,19 @@ void print_bingo(int bingo[N][N])
 	{
 		for (j=0; j<N; j++)
 		{
-			printf("%4u ",bingo[i][j]);
+			printf("%4u ",bingo_p[i][j]);
 		}
 		printf("\n");
 	}printf("\n");
 }
 
+void get_number_by_me(int me)
+{
+	int n;
+	printf("당신이 입력할 숫자 : ");
+	scanf("%d",&me);
+	
+	return ;
+};
 
 

@@ -4,5 +4,8 @@
 
 #define N 5
 
+#define M 3 
+
 void initiate_bingo();
-void print_bingo(int bingo[N][N]);
+void print_bingo(int bingo_p[N][N]);
+void get_number_by_me(int me);
