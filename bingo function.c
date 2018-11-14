@@ -6,9 +6,11 @@ void initiate_bingo()
 {	
 	
 	int bingo[N][N];
+	int my_bingo[N][N]; //내 빙고 배열 
+	int com_bingo[N][N]; //컴퓨터의 빙고 배열 
 	int i,j;
-	int baeyeol[N*N];
-	int nansu;
+	int jungbok[N*N]; //중복을 받아줄 배열 
+	int nansu; //난수를 받아줄 변수 
 	
 	srand((unsigned)time(NULL));
 	
@@ -20,8 +22,8 @@ void initiate_bingo()
 		}
 	}
 	
-	for(i=0; i<N; i++) //baeyeol을 0으로 초기화 
-		baeyeol[i]=0;
+	for(i=0; i<N*N; i++) //jungbok을 0으로 초기화 
+		jungbok[i]=0;
 		
 		
 		
@@ -31,13 +33,13 @@ void initiate_bingo()
 			{
 				while (1)
 				{
-					baeyeol[N*N]=0;
+					jungbok[N*N]=0;
 					nansu= rand()%(N*N)+1;
 					
-					if (baeyeol[nansu]==0)
+					if (jungbok[nansu-1]==0)
 					{
-						bingo[i][j]=nansu;
-						baeyeol[nansu]=1;
+						bingo[i][j] = nansu;
+						jungbok[nansu-1] = 1;
 						break;
 					}
 				}
@@ -56,10 +58,10 @@ void print_bingo(int bingo[N][N])
 	{
 		for (j=0; j<N; j++)
 		{
-			printf("%d ",bingo[i][j]);
+			printf("%4u ",bingo[i][j]);
 		}
 		printf("\n");
-	}
+	}printf("\n");
 }
 
 
