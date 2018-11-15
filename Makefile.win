@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = bingo.o "bingo\ function.o"
-LINKOBJ  = bingo.o "bingo function.o"
+OBJ      = bingo.o "function\ 1\ 2.o" "function\ 3\ 4.o" "function\ 5.o"
+LINKOBJ  = bingo.o "function 1 2.o" "function 3 4.o" "function 5.o"
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -27,5 +27,11 @@ $(BIN): $(OBJ)
 bingo.o: bingo.c
 	$(CC) -c bingo.c -o bingo.o $(CFLAGS)
 
-"bingo\ function.o": bingo\ function.c
-	$(CC) -c "bingo function.c" -o "bingo function.o" $(CFLAGS)
+"function\ 1\ 2.o": function\ 1\ 2.c
+	$(CC) -c "function 1 2.c" -o "function 1 2.o" $(CFLAGS)
+
+"function\ 3\ 4.o": function\ 3\ 4.c
+	$(CC) -c "function 3 4.c" -o "function 3 4.o" $(CFLAGS)
+
+"function\ 5.o": function\ 5.c
+	$(CC) -c "function 5.c" -o "function 5.o" $(CFLAGS)

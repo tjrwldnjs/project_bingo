@@ -1,4 +1,4 @@
-#include "bingo.h"
+#include "function 1 2.h"
 
 #define N 5
 #define M 3
@@ -37,7 +37,7 @@ void initiate_bingo(int bingo[N][N])
 					if (jungbok[nansu-1] == 0)
 					{
 						bingo[i][j] = nansu;
-						jungbok[nansu-1] = 1;
+						jungbok[nansu-1] = 1; //nansu를 사용했다고 표시 
 						break;
 					}
 				}
@@ -61,14 +61,5 @@ void print_bingo(int bingo_p[N][N])
 		printf("\n");
 	}printf("\n");
 }
-
-void get_number_by_me(int me)
-{
-	int n;
-	printf("당신이 입력할 숫자 : ");
-	scanf("%d",&me);
-	
-	return ;
-};
 
 

@@ -8,4 +8,4 @@
 
 void initiate_bingo();
 void print_bingo(int bingo_p[N][N]);
-void get_number_by_me(int me);
+
