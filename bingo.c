@@ -2,7 +2,7 @@
 
 int main(int argc, char *argv[]) {
 
-	printf("지원이가 만든 BINGO!!!!\n");
+	printf("--지원이가 만든 BINGO!!!!--\n");
 	printf("\n");
 	
 	int my_bingo[N][N];

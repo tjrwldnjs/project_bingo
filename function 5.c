@@ -11,7 +11,7 @@ void process_bingo(int bingo[N][N])
 		{
 			if (bingo[i][j]==number)
 			{
-				bingo[i][j] = -1;
+				bingo[i][j] = 0;
 			}
 		}
 	}
