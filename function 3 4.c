@@ -1,51 +1,55 @@
 #include "function 3 4.h"
 
-void get_number_by_me(int num)
+void get_number_byMe(int bingo[N][N])
 {
-	int number;
-	int i, retry;
-	int check[N*N];
-	int count=0;
+	int num;
+	int i,j;
 	
-	do{
-		retry = 0; // 0은 나, 1은 컴퓨터 
-		if (num==0)
-		{
-			printf("숫자를 입력하세욤 : ");
-			scanf("%d", &number);
-			printf("\n");
-			
-			if(number<1 || number>N*N)
-			{
-				printf("잘못입력했어욤. 다시 입력하세요!!\n\n");
-				retry = 1;  
-			} 
-		}
+	while(1)
+	{
+		printf("숫자를 입력하세요 : ");
+		scanf("%d",&num);
 		
-		else
+		if(num>=1 && num<=N*N)
 		{
-			number = rand()%N*N+1;
-		}
-		
-		if(retry == 0)
-		{
-			for (i=0; i<count; i++)
-			
-			if(retry == 0)
+			for(i=0; i<N; i++)
 			{
-				for(i=0; i<N; i++)
+				for(j=0; j<N; j++)
 				{
-					if(check[i]==number)
+					if(bingo[i][j]==num)
 					{
-						retry=1;
-						break;
+						bingo[i][j]=0;
+						
 					}
 				}
-			}
-		}
-	} while (retry == 1); 
-	
-	
-	return ;
+			}break;
+		 } 
+		 else 
+		 {
+		 	printf("잘못 입력했습니다. 다시 입력하세요.\n");
+		 }
+	}
+	return ; 
 }
 
+void get_number_byCom(int bingo[N][N])
+{
+	int num;
+	int i,j;
+	
+	srand((unsigned)time(NULL)); 
+	
+	num = rand()%N*N+1;
+	
+	for(i=0; i<N; i++)
+	{
+		for(j=0; j<N; j++)
+		{
+			if(bingo[i][j]==num)
+			{
+				bingo[i][j]=0;
+			}
+		}
+	} printf("컴퓨터가 입력한 숫자 : %d ",num);
+	return ;
+}

@@ -16,11 +16,8 @@ int main(int argc, char *argv[]) {
 	initiate_bingo(com_bingo);
 	print_bingo(com_bingo);
 	
+	get_number_byMe(my_bingo);
+	get_number_byCom(com_bingo); 
 	
-	int n;
-	get_number_by_me(n);
-	
-	void process_bingo(int bingo[N][N]);
-	 
 	return 0;
 }
