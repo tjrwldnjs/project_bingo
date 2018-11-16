@@ -2,19 +2,21 @@
 
 void process_bingo(int bingo[N][N])
 {
-	int number;
 	int i,j;
+	int num;
+	int result = -1;
+	int check=0;
 	
-	for (i=0; i<N; i++)
+	for(i=0; i<N; i++)
 	{
-		for(j=0; j<N; j++)
+		for (j=0; j<N; j++)
 		{
-			if (bingo[i][j]==number)
+			if(bingo[i][j] == num)
 			{
-				bingo[i][j] = 0;
+				bingo[i][j] = -1;
 			}
 		}
-	}
+	} 
 	
 	return ;
 }

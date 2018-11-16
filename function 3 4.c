@@ -18,7 +18,8 @@ void get_number_byMe(int bingo[N][N])
 					bingo[i][j] = nansu;
 					jungbok[nansu-1] = 1; //nansu를 사용했다고 표시 
 					break;
-				}
+				}printf("\n잘못입력했습니다. 다시입력해주세요.\n\n");
+				 
 		} //내가 입력한 수의 중복을 피하기 위해 작성한 코드 
 	
 	while(1)
@@ -42,7 +43,7 @@ void get_number_byMe(int bingo[N][N])
 		 } 
 		 else 
 		 {
-		 	printf("잘못 입력했습니다. 다시 입력하세요.\n");
+		 	printf("\n잘못입력했습니다. 다시 입력하세요.\n\n");
 		 }
 	}
 	return ; 
@@ -71,6 +72,6 @@ void get_number_byCom(int bingo[N][N])
 					break;
 				}
 				
-		}printf("컴퓨터가 입력한 숫자 : %d ",num);
+		}printf("\n컴퓨터가 입력한 숫자 : %d ",num);
 	return ;
 }
