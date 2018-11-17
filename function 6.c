@@ -1,56 +1,58 @@
 #include "function 1 2.h"
 
-void count_bingo(int bingo[N][N])
+int count_bingo(int bingo[N][N])
 {
-	int countBingo=0; //ÀüÃ¼ ºù°í ¼ö 
-	int cross1=0; //´ë°¢¼±ºù°í1 
-	int cross2=0; //´ë°¢¼±ºù°í2 
 	int i,j;
-
-	while(countBingo==M)
-	{
+	int sum;
+	int count=0;
+	
 	for(i=0; i<N; i++)
 	{
-		int ROWS=0; // °¡·Îºù°í 
-		int COLS=0; // ¼¼·Îºù°í 
+		sum=0;
 	
 		for(j=0; j<N; j++)
 		{
-			if(bingo[i][j]==0)
-			{
-				ROWS++;	
-			}
-			if(bingo[j][i]==0)
-			{
-				COLS++;
-			}
-			if(i==j && bingo[i][j]==0)
-			{
-				cross1++;
-			}
-			if((i+j==N-1) && bingo[i][j]==0)
-			{
-				cross2++;
-			}
+			sum += bingo[i][j];
 		}
-			if(ROWS==N)
-			{
-				countBingo++;
-			}
-			if(COLS==N)
-			{
-				countBingo++;
-			}
+		if(sum==0)
+		{
+			count++;
+		}
 	}
 	
-	if(cross1==N)
+	for (j=0; j<N; j++)
 	{
-		countBingo++;
-	} 
-	if(cross2==N)
-	{
-		countBingo++;
+		sum=0;
+
+		for(i=0; i<N; i++)
+		{
+			sum += bingo[i][j];
+		}
+		if(sum==0)
+		{
+			count++;
+		}
 	}
-}	printf("%d ºù°íÀÔ´Ï´Ù.\n",countBingo);
-	return ;
+	sum=0;
+	
+	for(i=0; i<N; i++)
+	{
+		sum += bingo[i][i];
+	}
+	if(sum==0)
+	{
+		count++;
+	}
+	
+	for(i=0; i<N; i++)
+	{
+		sum += bingo[i][N-i-1];
+	}
+	if (sum==0)
+	{
+		count++;
+	}
+	
+	printf("%d ºù°íÀÔ´Ï´Ù.\n",count);
+	return count;
 }
