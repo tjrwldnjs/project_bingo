@@ -23,9 +23,7 @@ void initiate_bingo(int bingo[N][N])
 	{
 		jungbok[i]=0;
 	}	
-		
-		
-		
+			
 	for(i=0; i<N; i++)
 	{
 		for(j=0; j<N; j++)
@@ -43,7 +41,7 @@ void initiate_bingo(int bingo[N][N])
 				}
 			}
 	
-	}	return bingo[N][N];
+	}	return ;
 }
 		
 

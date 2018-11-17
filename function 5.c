@@ -11,10 +11,11 @@ void process_bingo(int bingo[N][N])
 				{
 					if(bingo[i][j]==num)
 					{
-						bingo[i][j]=0;
+						bingo[i][j]=0; //나와 컴퓨터가 입력한 숫자를 0으로 바꿔준다. 
 					}
+					
 				}
-			}
+			}	
 	return ;
 }
 	

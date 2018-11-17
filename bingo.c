@@ -21,17 +21,19 @@ int main(int argc, char *argv[]) {
 		get_number_byMe(my_bingo);
 		process_bingo(my_bingo);
 		process_bingo(com_bingo);
+		count_bingo(my_bingo);
 		
 		get_number_byCom(com_bingo);
 		process_bingo(my_bingo);
 		process_bingo(com_bingo);
-	
+		count_bingo(com_bingo);
+		
 		print_bingo(my_bingo);
 		print_bingo(com_bingo);
+		
 	}
-
-	count_bingo(my_bingo);
-	count_bingo(com_bingo);
+		
+		
 	
 	return 0;
 }

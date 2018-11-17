@@ -5,7 +5,7 @@ void get_number_byMe(int bingo[N][N])
 	int num;
 	int i,j;
 
- // 내 숫자 중복잡기. 
+ // 내 숫자 중복잡기 & 내 숫자 != 컴퓨터 숫자 되게하는거 만들깅.... 
 	while(1)
 	{
 		printf("숫자를 입력하세요 : ");
@@ -28,6 +28,7 @@ void get_number_byMe(int bingo[N][N])
 		 {
 		 	printf("\n잘못입력했습니다. 다시 입력하세요.\n\n");
 		 }
+		 
 	}
 	return ; 
 }
