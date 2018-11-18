@@ -1,6 +1,11 @@
 #include "function 1 2.h"
 
 int main(int argc, char *argv[]) {
+	
+	//해야할 것 : count_bingo의 위치 >> while문 안 : 루프가 1번만 돌고 말음.  while문 밖 : count_bingo가 인식안됌.
+	//            내 숫자를 중복입력했을 때 오류메세지 출력하고 다시 받아야함. >> 내 숫자 중복잡기
+	//            컴퓨터가 숫자를 중복입력함. >> 컴퓨터 숫자 중복잡기 
+	//            내가 입력한 수와 컴퓨터가 입력한 수가 같음 >> 얘는 뭐 어떻게하라고.. 
 
 	printf("--지원이가 만든 BINGO!!!!--\n");
 	printf("\n");
@@ -34,30 +39,31 @@ int main(int argc, char *argv[]) {
 		
 		print_bingo(my_bingo);
 		print_bingo(com_bingo);
-		
+			
+	}
 		My_count=count_bingo(my_bingo,count);
 		Com_count=count_bingo(com_bingo,count);
 		
-		if(My_count>=M && Com_count<M)
+		while(My_count>=M || Com_count>=M)
 		{
-			printf("승리자 : 나\n");
-			printf("%d번쨰에 승리했습니다.\n", turn);
-			break;
+			if(My_count>=M && Com_count<M)
+			{
+				printf("승리자 : 나\n");
+				printf("%d번쨰에 승리했습니다.\n", turn);
+				break;
+			}
+			if(Com_count>=M && My_count<M)
+			{
+				printf("승리자 : 나\n");
+				printf("%d번쨰에 승리했습니다.\n", turn);
+				break;
+			}
+			if(My_count>=M && Com_count>=M)
+			{
+				printf("비겼습니다.\n");
+				printf("%d번쨰에 비겼습니다.\n", turn); 
+			} 	
 		}
-		if(Com_count>=M && My_count<M)
-		{
-			printf("승리자 : 나\n");
-			printf("%d번쨰에 승리했습니다.\n", turn);
-			break;
-		}
-		if(My_count>=M && Com_count>=M)
-		{
-			printf("비겼습니다.\n");
-			printf("%d번쨰에 비겼습니다.\n", turn); 
-		} 
-	}
 		
-		
-	
 	return 0;
 }
