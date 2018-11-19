@@ -1,6 +1,6 @@
 #include "function 3 4.h"
 
-void get_number_byMe(int bingo[N][N])
+void get_number_byMe(int bingo[N][N]) //내 숫자 중복잡기 
 {
 	int num;
 	int i,j;
@@ -32,12 +32,10 @@ void get_number_byMe(int bingo[N][N])
 	return ; 
 }
 
-void get_number_byCom(int bingo[N][N])
+void get_number_byCom(int bingo[N][N]) //컴숫자 중복잡기 
 {
 	int num;
 	int i,j;
-	int jungbok[N*N]; //중복을 받아줄 배열 
-	int nansu; // 난수를 받아줄 변수 
 		
 	while (1)
 	{

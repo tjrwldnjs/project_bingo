@@ -44,6 +44,7 @@ int count_bingo(int bingo[N][N])
 		count++;
 	}
 	
+	sum=0;
 	for(i=0; i<N; i++)
 	{
 		sum += bingo[i][N-i-1];
