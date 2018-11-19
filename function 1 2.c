@@ -54,7 +54,7 @@ void print_bingo(int bingo_p[N][N])
 	{
 		for (j=0; j<N; j++)
 		{
-			printf("%4u ",bingo_p[i][j]);
+			printf("%4u ",bingo_p[i][j]); //%4u에서 4는 그냥 배열을 예쁘게하기 위해서, u는 양수만 나오게 하기 위해서 사용 
 		}
 		printf("\n");
 	}printf("\n");

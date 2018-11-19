@@ -22,8 +22,8 @@ void get_number_byMe(int bingo[N][N]) //내 숫자 중복잡기
 					}
 				}
 			}break;
-		 } 
-		 else 
+		} 
+		else 
 		 {
 		 	printf("\n잘못입력했습니다. 다시 입력하세요.\n\n");
 		 }
