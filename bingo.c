@@ -19,7 +19,6 @@ int main(int argc, char *argv[]) {
 	initiate_bingo(com_bingo);
 	
 	print_bingo(my_bingo);
-	print_bingo(com_bingo);	
 	
 	while(1)
 	{	
@@ -34,7 +33,6 @@ int main(int argc, char *argv[]) {
 		turn++;
 		
 		print_bingo(my_bingo);
-		print_bingo(com_bingo);
 			
 		My_count=count_bingo(my_bingo,count);
 		Com_count=count_bingo(com_bingo,count);

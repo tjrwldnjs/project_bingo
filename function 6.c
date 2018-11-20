@@ -55,6 +55,6 @@ int count_bingo(int bingo[N][N])
 		count++;
 	}
 	
-	printf("%d ºù°íÀÔ´Ï´Ù.\n\n",count);
+	printf("ÇöÀç ºù°í ¼ö : %d ºù°í\n\n",count);
 	return count;
 }
