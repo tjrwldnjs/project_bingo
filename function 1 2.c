@@ -24,7 +24,7 @@ void initiate_bingo(int bingo[N][N])
 		jungbok[i]=0;
 	}	
 			
-	for(i=0; i<N; i++)
+	for(i=0; i<N; i++) //1부터 25까지의 숫자를 중복없이 랜덤으로 배열하기 위함. 
 	{
 		for(j=0; j<N; j++)
 			{

@@ -14,7 +14,7 @@ void get_number_byMe(int bingo[N][N])
 		
 		if(num<1 ||num>N*N)
 		{
-			printf("잘못입력했습니다. 다시 입력해주세요.");
+			printf("\n잘못입력했습니다. 다시 입력해주세요.\n\n");
 		}
 		else
 		{
@@ -29,7 +29,7 @@ void get_number_byMe(int bingo[N][N])
 					}
 				}
 			}
-			if(check)
+			if(check) 
 			break;
 			
 			else
@@ -42,7 +42,7 @@ void get_number_byMe(int bingo[N][N])
 	return ; 
 }
 
-void get_number_byCom(int bingo[N][N]) //컴숫자 중복잡기 
+void get_number_byCom(int bingo[N][N])
 {
 	int num;
 	int i,j;
